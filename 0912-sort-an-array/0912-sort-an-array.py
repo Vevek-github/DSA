@@ -4,7 +4,7 @@ class Solution:
         
         return nums
     
-    
+    # time complexity O(n2)
     
     # Insertion Sort
     
