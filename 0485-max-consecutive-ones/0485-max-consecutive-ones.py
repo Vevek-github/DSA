@@ -21,7 +21,7 @@ class Solution:
                 sol= max(maxi ,sol)
                 i+=1
             
-            elif nums[i]==0 :
+            else:
                 maxi=0
                 i+=1
         sol= max(maxi,sol)
