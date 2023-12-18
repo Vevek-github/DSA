@@ -24,7 +24,7 @@ class Solution:
             else:
                 maxi=0
                 i+=1
-        sol= max(maxi,sol)
+        
         return sol
                 
             
