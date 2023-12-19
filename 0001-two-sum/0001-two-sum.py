@@ -1,9 +1,15 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
+        presum = {}
         for i in range(n):
-            for j in range(i+1 , n):
-                if nums[i]+nums[j]== target :
-                    return i , j 
-        return -1
+            temp=nums[i]
+            presum[temp]= i
+        j = 0
+        while j < n :
+            if (target-nums[j]) in presum:
+                if presum[target-nums[j]] != j:
+                    return presum[target-nums[j]] , j
+            j+=1    
+        return -1     
             
