@@ -5,7 +5,7 @@ class Solution:
         """
         #nums.sort()
         red, white, blue = 0, 0, len(nums) - 1
-
+        #dutch nationla flag algorthim
         while white <= blue:
             if nums[white] == 0:
                 nums[white], nums[red] = nums[red], nums[white]
