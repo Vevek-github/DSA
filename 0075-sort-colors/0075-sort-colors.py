@@ -4,12 +4,15 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         #nums.sort()
-        n = len(nums)
-        for i in range(len(nums)):
-            j = i+1
-            while j < len(nums):
-                mini = i
-                if nums[mini] < nums[j]:
-                    mini = j
-                nums[mini],nums[j]= nums[j],nums[mini]
-                j+=1
+        red, white, blue = 0, 0, len(nums) - 1
+
+        while white <= blue:
+            if nums[white] == 0:
+                nums[white], nums[red] = nums[red], nums[white]
+                red += 1
+                white += 1
+            elif nums[white] == 1:
+                white += 1
+            else:
+                nums[white], nums[blue] = nums[blue], nums[white]
+                blue -= 1
