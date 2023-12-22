@@ -6,7 +6,7 @@ class Solution:
         left = 0 
         right = 1
         maximum = 0 
-        while right < x and left <= right:
+        while right < x:
             diff =prices[right] - prices[left]
             if diff > 0:
                 right +=1
