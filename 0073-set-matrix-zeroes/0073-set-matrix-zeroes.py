@@ -16,10 +16,12 @@ class Solution:
                     ver.append(j)
         for i in hor:
             for j in range(n):
-                matrix[i][j]= 0
+                if matrix[i][j]!= 0:
+                    matrix[i][j]= 0
         for j in ver:
             for i in range(m):
-                matrix[i][j]=0
+                if matrix[i][j]!= 0:
+                    matrix[i][j]= 0
             
 
         
